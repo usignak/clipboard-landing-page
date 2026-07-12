@@ -1,3 +1,6 @@
+@import "./modules/variables";
+@import "./modules/mixins";
+
 :root {
   font-size: 100%;
 }
@@ -14,4 +17,68 @@ body {
   font-size: 1.125rem;
   font-weight: 400;
   font-family: "Bai Jamjuree", sans-serif;
+  background: url("../images/bg-header-desktop.png") no-repeat top/cover;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1110px;
+  margin: 0 auto;
+}
+
+.header__wrapper {
+  padding: 120px 0 0;
+  text-align: center;
+  margin-bottom: 70px;
+
+  @media screen and (min-width: $laptopWidth) {
+    padding: 130px 0 0;
+  }
+}
+
+.section {
+  margin-bottom: 160px;
+  text-align: center;
+}
+
+.hero {}
+
+.title {
+  color: $grayColor700;
+  font-weight: 600;
+  margin-bottom: 25px;
+
+  &--h1 {
+    font-size: 2.81rem;
+  }
+}
+
+.text {
+  max-width: 700px;
+  color: $grayColor500;
+  margin: 0 auto 50px;
+}
+
+.buttons {
+  @include flex(row, center, center, 15px);
+}
+
+.btn {
+  text-decoration: none;
+  font-weight: 600;
+  color: $whiteColor;
+  padding: 20px 50px;
+  border-radius: 50px;
+
+  &:first-of-type {
+    background-color: $greenColor;
+    border-bottom: 4px solid $darkGreenColor;
+    box-shadow: 0px 5px 10px hsla(171, 66%, 44%, .2);
+  }
+
+  &:last-of-type {
+    background-color: $blueColor;
+    border-bottom: 4px solid $darkBlueColor;
+    box-shadow: 0px 5px 10px hsla(233, 100%, 69%, .2);
+  }
 }
