@@ -57,21 +57,30 @@ body {
   }
 }
 
-.hero {}
-
 .title {
   color: $grayColor700;
   font-weight: 600;
-  margin-bottom: 25px;
 
   &--h1 {
-    font-size: 2.81rem;
+    font-size: 2.5rem;
+    margin-bottom: 25px;
+  }
+
+  &--h2 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+  }
+
+  &--h3 {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
   }
 }
 
 .text {
   max-width: 700px;
   color: $grayColor500;
+  line-height: 2;
   margin: 0 auto 50px;
 }
 
@@ -97,4 +106,59 @@ body {
     border-bottom: 4px solid $darkBlueColor;
     box-shadow: 0px 5px 10px hsla(233, 100%, 69%, .2);
   }
+}
+
+.container {
+  @include flex(row, flex-start, space-between, 120px);
+  margin-top: 80px;
+  margin-bottom: 260px;
+}
+
+.photo {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  position: relative;
+
+  img {
+    position: absolute;
+    left: -55%;
+  }
+}
+
+.box {
+  &--col {
+    @include flex(column, flex-start, center, 60px);
+    flex: 1;
+    text-align: left;
+
+    .box__item {
+      max-width: 340px;
+    }
+  }
+
+  &--row {
+    @include flex(row, flex-start, space-between, 30px);
+    margin-top: 80px;
+
+    .box__item {
+      width: 33%;
+    }
+  }
+}
+
+.box__item {
+  img {
+    margin-bottom: 45px;
+  }
+
+  .text {
+    margin-bottom: 0;
+  }
+}
+
+.items {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
