@@ -17,7 +17,6 @@ body {
   font-size: 1.125rem;
   font-weight: 400;
   font-family: "Bai Jamjuree", sans-serif;
-  // background: url("../images/bg-header-desktop.png") no-repeat top/cover;
   position: relative;
 
   &::before {
@@ -161,4 +160,41 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.footer {
+  background-color: $grayColor200;
+  padding: 45px;
+}
+
+.footer__wrapper {
+  @include flex(row, center, space-between, 0);
+}
+
+.footer__item {
+  @include flex(row, flex-start, flex-start, 135px);
+}
+
+.footer-logo {
+  width: 55px;
+  height: 55px;
+}
+
+.list {
+  max-width: 500px;
+  list-style: none;
+  @include flex(row, flex-start, flex-start, 20px 90px);
+  flex-wrap: wrap;
+  text-align: left;
+
+  a {
+    text-decoration: none;
+    color: $grayColor700;
+    font-weight: 600;
+  }
+}
+
+.social-media {
+  text-decoration: none;
+  @include flex(row, flex-start, space-between, 20px);
 }
